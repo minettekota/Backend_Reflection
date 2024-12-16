@@ -70,6 +70,6 @@ def process_data():
 
 if __name__ == '__main__':
      # 環境変数PORT を取得（デフォルトは8000）
-     port = int(os.environ.get('PORT', 8080))
+     port = int(os.environ.get('PORT', 8000))
      # デバッグモードをローカル環境では有効に、本番では無効に
      app.run(host='0.0.0.0', port=port, debug=False)
