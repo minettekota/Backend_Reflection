@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app, resources={
     r"/api/*": {
         "origins": [
-            "https://tech0-gen-8-step3-app-py-12.azurewebsites.net",
+            "https://tech0-gen-8-step3-app-node-12.azurewebsites.net",
             "http://localhost:3000" # ローカル開発⽤
         ]
     }
@@ -70,6 +70,6 @@ def process_data():
 
 if __name__ == '__main__':
      # 環境変数PORT を取得（デフォルトは8000）
-     port = int(os.environ.get('PORT', 8000))
+     port = int(os.environ.get('PORT', 8080))
      # デバッグモードをローカル環境では有効に、本番では無効に
      app.run(host='0.0.0.0', port=port, debug=False)
