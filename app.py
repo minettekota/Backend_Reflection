@@ -62,7 +62,7 @@ def process_data():
         value_analysis = completion.choices[0].message.content.strip()
 
 
-        return jsonify({"value_analysis": value_analysis})
+        return jsonify({"values": value_analysis})
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
